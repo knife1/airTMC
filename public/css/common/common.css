@@ -1,0 +1,184 @@
+.stateBtnGroup {
+  margin-bottom: 30px;
+}
+
+.stateBtn {
+  color: #000;
+  background-color: #fff;
+  font-family: "微软雅黑 Regular", "微软雅黑";
+  border: 1px solid #ccc;
+  padding: 5px 32px;
+  font-size: 14px;
+}
+
+.stateBtn:hover {
+  color: #ffffff;
+  background: #ff9913;
+  cursor: pointer;
+}
+
+.stateBtn_active {
+  color: #ffffff;
+  background: #ff9913;
+}
+
+a.tagTriangle {
+  display: inline-block;
+  position: relative;
+  background: #ccc;
+  color: white;
+  line-height: 1em;
+  margin: 0 10px 0 0;
+  padding: 3px;
+  padding-right: 16px;
+  padding-left: 13px;
+}
+
+a.tagTriangle:before {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  border: transparent 0.89em solid;
+  border-left-color: #ccc;
+  top: 0px;
+  right: -1.72em;
+}
+
+.btnAreas {
+  margin-top: 42px;
+  margin-left: 20%;
+}
+
+.btnAreas a {
+  display: inline-block;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  padding: 0 25px;
+  margin-right: 10px;
+}
+
+.blueContent {
+  border: 1px solid #bbdfff;
+  border-radius: 3px 3px 0 0;
+  margin-bottom: 30px;
+}
+
+.blueContent .title {
+  background: #ecf5ff;
+  height: 32px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #666666;
+  line-height: 32px;
+  padding-left: 10px;
+  margin: 0;
+}
+
+.bg-blue {
+  background-color: #ecf5ff;
+}
+
+.hide {
+  display: none;
+}
+
+.orange-font {
+  color: #ff9133;
+}
+
+.cyan-font {
+  color: #6ccd61;
+}
+
+.tag-checked,
+.tag-unchecked,
+.tag-checkDisabeld {
+  border: 1px solid #ff9133;
+  padding: 9px 13px;
+  position: relative;
+  font-size: 13px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.tag-checkDisabeld {
+  background: #ccc;
+  border: 1px solid #ccc;
+}
+
+.tag-unchecked {
+  border: 1px solid #ccc;
+}
+
+.tag-unchecked:hover {
+  border: 1px solid #ff9133;
+}
+
+.tag-checkDisabeld:hover {
+  border: 1px solid #ccc;
+}
+
+.tag-checked:after {
+  content: "";
+  background: url(../img/chosed.png);
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  top: 20px;
+  right: -1px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+.btn-basic {
+  display: inline-block;
+  padding: 4px 20px;
+  background-color: #5786cc;
+  color: white;
+  margin-left: 10px;
+}
+
+.btn-cancel {
+  display: inline-block;
+  padding: 4px 20px;
+  color: black;
+  margin-left: 10px;
+  border: 1px solid #ddd;
+}
+
+.btn-default {
+  color: #000;
+  border-radius: 4px;
+  background-color: #fff;
+  font-family: "微软雅黑 Regular", "微软雅黑";
+  border: 1px solid #ccc;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.bold {
+  font-weight: bold;
+}

@@ -1,0 +1,89 @@
+{{#section 'css'}}
+<link rel="stylesheet" href="/css/productManage/add.css">
+{{/section}}
+<div class="content center">
+    <input type="hidden" name="query" value="{{query}}">
+    <input type="hidden" name="key" value="{{key}}">
+    <input type="hidden" name="type" value="{{type}}">
+    <input type="hidden" name="info" value="">
+    <div class="main-content center">
+        <div class="nav-a div-a">
+            <div class="queryTable center set-service">
+                <input type="hidden" name="isGetDetail" value="1">
+                <input type="hidden" name="groupID" value="{{key}}">
+                <h2>排序规则管理基本信息</h2>
+                <table style="width:60%;">
+                    <tr>
+                        <td>
+                            <span>排序规则组名:</span><input type="text" class="w120" name="groupName">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span>预订类型:</span>
+                            <label><input type="checkbox" class="" value="0" name="reservationType" checked>全选</label>
+                            <label><input type="checkbox" class="" value="1" name="reservationType" checked>因公</label>
+                            <label><input type="checkbox" class="" value="2" name="reservationType" checked>因私</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span>默认展示价格:</span>
+                            <label><input type="radio" class="" value="0" name="defaultDisplay" checked>协议价格优先</label>
+                            <label><input type="radio" class="" value="1" name="defaultDisplay">最低价格优先</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span>有效日期:</span><input type="text" class="w150" name="effectiveTime" value="" onfocus="WdatePicker({readonly:true,dateFmt:'yyyy-MM-dd HH:mm:ss'})">
+                            <span style="text-align: center;width: 29px;margin: 0;">至</span>
+                            <input type="text" class="w150" name="failureTime" value="" onfocus="WdatePicker({readonly:true,dateFmt:'yyyy-MM-dd HH:mm:ss'})">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="queryTable center set-service">
+                <h2>航司优先级</h2>
+                <table style="width:950px;">
+                    <tr>
+                        <td style="padding-left: 20px;">温馨提示：默认按价格排序，若有特殊需求，请将优先展示的航司移动列右侧栏</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="select-left select-data left">
+                                <div class="search">
+                                    <input type="text"><a href="javascript:void(0);" id="search"></a>
+                                </div>
+                                <div class="left-bottom">
+                                    <div class="bgWhite to-select">
+                                        <label><input type="radio" name="selectAir" value="1">全选</label>
+                                        <label><input type="radio" name="selectAir" value="0">反选</label>
+                                    </div>
+                                    <div class="data-list data-list-left baGray" style="margin-top: 5px;height: 350px;overflow-y: scroll;"></div>
+                                </div>
+
+                            </div>
+                            <div class="select-right select-data left">
+                                <p class="baGray">已选择数据<strong class="total">0</strong>条</p>
+                                <div class="data-list data-list-right" style="height: 388px;overflow-y: scroll;">
+                                    <table class="show-list" style="width: 360px;"></table>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="queryTable" style="text-align: center;border: 0;">
+                                <a href="javascript:void(0);" class="btn btn73" id="saveSortRule">确认</a>
+                                <a href="javascript:void(0);" class="clear-btn cancelBtn" style="width: 40px;">取消</a>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+{{#section 'js'}}
+<script src="../../js/common/require.min.js" data-main="productManage/addSortRule20160707"></script>
+{{/section}}

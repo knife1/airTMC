@@ -1,0 +1,32 @@
+<script type="text/javascript" src="{{static '/js/common/jquery-1.7.2.min.js'}}"></script>
+<script type="text/javascript" src="{{static '/js/common/jquery.cookie.min.js'}}"></script>
+<script type="text/javascript" src="{{static '/js/common/layer/layer.js'}}"></script>
+<script type="text/javascript" src="{{static '/js/common/My97DatePicker4.8/WdatePicker.js'}}"></script>
+
+<script type="text/javascript">
+    require = {
+        baseUrl: "{{static '/js/'}}",
+        paths: {
+            "render": "common/jsrender.min",
+            "jqueryTools": "common/jqueryTools20160921.min",
+            "jsrenderPagination": "common/jsRenderExtPagination-2.0.9.min",
+            "tools-detail": "common/tools-detail",
+            "underscore": "common/underscore-min"
+        }
+    };
+    $.ajaxSetup({
+        statusCode: {
+            309: function (data, status, xhr) {
+                layer.alert("登录过期");
+            },
+            500: function (data, status, xhr) {
+                if (data.indexOf("GATEWAY_NEED_LOGIN") > -1) {
+                    layer.alert("登录过期");
+                }
+            }
+        },
+        cache: false,
+        error: function (msg) {
+        }
+    });
+</script>

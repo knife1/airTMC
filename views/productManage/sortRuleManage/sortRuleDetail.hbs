@@ -1,0 +1,84 @@
+{{#section 'css'}}
+<link href="/css/productManage/add.css" rel="stylesheet">
+<style type="text/css">
+	.set-service .data-list-right label {
+		display: block;
+	}
+</style>
+{{/section}}
+
+
+<div class="content center">
+	<input type="hidden" name="key" value="{{key}}"> <input type="hidden" name="type" value="1">
+	<div class="main-content center">
+		<div class="nav-a div-a">
+			<div class="queryTable center set-service">
+				<h2>排序规则管理基本信息</h2>
+				<table>
+					<tr>
+						<td><span>排序规则组名:</span><label class="groupName"></label></td>
+					</tr>
+					<tr>
+						<td><span>预订类型:</span> <label class="reservationTypeName"></label>
+						</td>
+					</tr>
+					<tr>
+						<td><span>默认展示价格:</span> <label class="defaultDisplayName"></label>
+						</td>
+					</tr>
+					<tr>
+						<td><span style="vertical-align: top;">适用企业:</span>
+							<div class="air-list" style="width: 80%; padding: 0; display: inline-block;"></div>
+						</td>
+					</tr>
+					<tr>
+						<td><span>有效时间:</span> <label style="width: 130px;" class="effectiveTime"></label> <span style="text-align: center; width: 29px; margin: 0;">至</span>
+							<label style="width: 130px;" class="failureTime"></label></td>
+					</tr>
+				</table>
+			</div>
+			<div class="queryTable center set-service">
+				<h2>航司优先级</h2>
+				<table style="width: 70%;">
+					<!--  <tr>
+                        <td>
+                            <span style="width:130px;">是否优先展示协议议价:</span>
+                            <label class="defaultDisplay">是</label>
+                        </td>
+                    </tr> -->
+					<tr>
+						<td style="padding-left: 195px;">
+							<div class="select-right select-data left">
+								<p class="baGray">
+									已选择数据<strong class="total">0</strong>条
+								</p>
+								<div class="data-list data-list-right"></div>
+							</div>
+						</td>
+					</tr>
+				</table>
+
+			</div>
+			<!-- <div class="queryTable center">
+                <h2>舱位优先级</h2>
+                <table style="width:70%;">
+                    <tr>
+                        <td>
+                            <span style="width:130px;">因公出行默认展示价格:</span>
+                            <label></label>
+                        </td>
+                    </tr>
+                </table>
+            </div> -->
+			<div class="queryTable" style="text-align: center; border: 0;">
+				<a href="/sortRuleManage/add?key={{key}}&type=2" class="btn btn73" id="">修改</a> <a href="javascript:;" class="clear-btn cancelBtn"
+				 style="width: 40px;">返回</a>
+			</div>
+		</div>
+
+	</div>
+
+</div>
+{{#section 'js'}}
+<script src="../../js/common/require.min.js" data-main="productManage/addSortRule20160707.js"></script>
+{{/section}}

@@ -1,0 +1,85 @@
+<div class="content center">
+    <input type="hidden" name="query" value="{{query}}">
+    <div class="main-content center">
+        <div class="nav-a div-a">
+            <div class="queryTable center">
+                <input type="hidden" name="isGetDetail" value="0">
+                <h2>查询条件</h2>
+                <table class="noQuery">
+                    <tr>
+                        <td><span>排序规则组ID:</span><input type="text" class="w120" name="groupID"></td>
+                        <td><span>排序规则组别名:</span><input type="text" class="w120" name="groupName"></td>
+                        <td><span>预订类型:</span> <select class="w120" name="reservationType">
+                                <option value="0">所有</option>
+                                <option value="1">因公</option>
+                                <option value="2">因私</option>
+                            </select></td>
+                        <td><span>默认展示价格:</span> <select class="w120" name="defaultDisplay">
+                                <option value="-1">所有</option>
+                                <option value="0">协议价格优先</option>
+                                <option value="1">最低价格优先</option>
+                            </select></td>
+                    </tr>
+                    <tr>
+                        <td><span>适用企业:</span> <input type="text" class="w120" name="applyCorpName"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" style="text-align: center;"><a href="javascript:void(0);" class="btn btn73" id="query-btn">查询</a>
+                            <a href="/sortRuleManage/add?type=0" class="btn btn73" id="add-btn">新增</a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="queryList center">
+                <h2>排序规则管理</h2>
+                <table border="0" cellspacing="0" cellpadding="0" class="list">
+                    <thead>
+                        <tr>
+                            <th style="width: 100px;">排序规则组ID</th>
+                            <th>排序规则组别名</th>
+                            <th>预订类型</th>
+                            <th>默认展示价格</th>
+                            <th style="width: 220px;">适用企业</th>
+                            <th>生效时间</th>
+                            <th>失效时间</th>
+                            <th>修改人</th>
+                            <th>修改时间</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                    <tbody id="sortRuleList"></tbody>
+                </table>
+                <div id="pagerJSRender" class="page-num pagerJSRender" style="text-align: right;"></div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script type="text/x-jsrender" id="sortRuleListTemp">
+        \{{for dataInfo}}
+                <tr>
+                  <td style="display:none;">
+                        <input type="hidden" name="groupID" value="\{{:flightSortGroupInfo.groupID}}">
+                    </td>
+                    <td>\{{:flightSortGroupInfo.groupID}}</td>
+                    <td>\{{:flightSortGroupInfo.groupName}}</td>
+                    <td>\{{:flightSortGroupInfo.reservationTypeName}}</td>
+                    <td>\{{:flightSortGroupInfo.defaultDisplayName}}</td>
+                    <td>\{{:flightSortGroupInfo.applyCorpName}}</td>
+                    <td>\{{:flightSortGroupInfo.effectiveTime}}</td>
+                    <td>\{{:flightSortGroupInfo.failureTime}}</td>
+                    <td>\{{:flightSortGroupInfo.modifier}}</td>
+                    <td>\{{:flightSortGroupInfo.modifyTime}}</td>
+                    <td>
+                        <a href="/sortRuleManage/add?key=\{{:flightSortGroupInfo.groupID}}&type=2">修改</a>
+                        <a href="javascript:void(0);" class="delete">删除</a>
+                        <a href="/sortRuleManage/sortRuleDetail?key=\{{:flightSortGroupInfo.groupID}}&type=1">查看详情</a>
+                        <a class="isUrgent" href="/sortRuleManage/suitCompany?groupType=3&groupID=\{{:flightSortGroupInfo.groupID}}&reservationType=\{{:flightSortGroupInfo.reservationType}}&defaultDisplay=\{{:flightSortGroupInfo.defaultDisplay}}">添加适用企业</a>
+                    </td>
+                </tr>
+             \{{/for}}
+</script>
+{{#section 'js'}}
+<script src="../../js/common/require.min.js" data-main="productManage/sortRuleManage20160707.js"></script>
+{{/section}}

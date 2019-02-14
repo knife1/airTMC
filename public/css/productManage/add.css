@@ -1,0 +1,313 @@
+@charset "UTF-8";
+
+html,
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td,
+em,
+button {
+	margin: 0;
+	padding: 0;
+}
+
+
+body {
+	font: 12px/1 '微软雅黑 Regular', '微软雅黑', arial, Simsun, sans-serif;
+	color: #333;
+	margin: 0 auto;
+}
+
+.color-blue {
+	color: #5786cc;
+}
+
+.div-a .queryTable {
+	background-color: #FFFFFF;
+}
+
+.bgWhite {
+	background-color: #FFFFFF;
+}
+
+.baGray {
+	background-color: #f2f2f2;
+}
+
+.select-data {
+	width: 360px;
+	/*
+    border: 1px solid red;*/
+	font-size: 13px;
+}
+
+/*.select-data div{
+    padding-left: 12px;
+}*/
+.select-left {
+	margin-right: 20px;
+	margin-left: 20px;
+}
+
+.select-left .search {
+	height: 35px;
+	border: 1px solid #e4e4e4;
+}
+
+.select-left .search input[type='text'] {
+	display: inline-block;
+	width: 80%;
+	border: none;
+	vertical-align: top;
+}
+
+.select-left .search a {
+	background: url("../../img/u21.png") no-repeat right;
+	float: right;
+}
+
+.select-left .left-bottom,
+.select-right {
+	border: 1px solid #e4e4e4;
+}
+
+.select-left .left-bottom {
+	margin-top: 5px;
+}
+
+.to-select {
+	padding-left: 20px;
+	height: 30px;
+	line-height: 30px;
+}
+
+.to-select label {
+	margin-right: 20px;
+}
+
+.select-data input {
+	vertical-align: middle;
+	margin-right: 2px;
+}
+
+.select-data input[type='text'],
+.data-list label {
+	display: block;
+	height: 35px;
+	line-height: 35px;
+}
+
+.select-data input[type='text'] {
+	width: 100%;
+}
+
+.data-list label {
+	padding-left: 12px;
+}
+
+.data-list-right label {
+	border-bottom: solid 1px #f2f2f2;
+}
+
+.queryTable .select-data p {
+	margin: 0;
+	padding-left: 20px;
+}
+
+.queryTable .select-data strong {
+	font-size: 16px;
+	color: #ff9900;
+}
+
+/**********服务费设置、新增***************/
+.about-car {
+	display: none;
+}
+
+.set-service {
+	border-color: #ecf5ff;
+}
+
+/* .set-service h2 {
+	background-color: #ecf5ff;
+	height: 50px;
+	line-height: 50px;
+	border-top: none;
+} */
+
+.set-service label {
+	display: inline-block;
+	/*  width: 90px; */
+	padding: 0 10px;
+	text-align: left;
+}
+
+.set-service input[type='radio'],
+.queryTable input[type='checkbox'] {
+	vertical-align: middle;
+}
+
+.air-list {
+	padding-left: 180px;
+}
+
+/*************导入导出*************/
+.queryTable .in-export {
+	width: 90%;
+	margin: 0 auto;
+}
+
+.queryTable .in-export div,
+.queryTable .in-export ul,
+.queryTable .in-export input,
+.queryTable .in-export a {
+	margin-left: 30px;
+}
+
+.queryTable .in-export span {
+	padding-left: 30px;
+}
+
+.queryTable .in-export p {
+	padding: 0;
+	margin: 0;
+	background: url("../../../Content/img/u8_line.png") repeat-x center center;
+}
+
+.queryTable .in-export p strong {
+	display: inline-block;
+	padding: 0 10px;
+	margin: 0;
+	font-size: 15px;
+	background-color: #FFFFFF;
+}
+
+.ul-tips {
+	margin: 20px 0;
+}
+
+.ul-tips li {
+	height: 25px;
+	line-height: 25px;
+	padding-left: 15px;
+	background: url("../../../Content/img/u20.png") no-repeat left center;
+}
+
+.queryTable .in-export span {
+	width: 330px;
+	text-align: left;
+	margin: 20px 0;
+}
+
+.queryTable .in-export span a {
+	margin: 0;
+	padding: 0;
+	color: #5786cc;
+}
+
+/************导入结果**********************/
+.export .export-result {
+	width: 85%;
+	height: 50px;
+	line-height: 50px;
+	margin-top: 40px;
+	margin-bottom: 20px;
+	padding-left: 20px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	background-color: #f2f2f2;
+}
+
+.export .export-result a {
+	float: right;
+	color: #5786cc;
+	height: inherit;
+	line-height: inherit;
+}
+
+.export .export-result strong {
+	color: #ff9900;
+	font-size: 14px;
+}
+
+/**********************搭售管理新增***************************/
+.queryTable .safe-list {
+	width: 85%;
+}
+
+.queryTable .safe-list label {
+	width: auto;
+	padding: 0 3px;
+}
+
+.queryTable .safe-list {
+	width: 85%;
+	min-width: 850px;
+	margin-left: 83px;
+	border: solid 1px #e4e4e4;
+	border-collapse: collapse;
+}
+
+.queryTable .safe-list .safeList {
+	text-align: center;
+	line-height: 20px;
+}
+
+.queryTable .safe-list .safeList span {
+	margin-left: 0;
+	color: #FF9913;
+	text-align: center;
+}
+
+.queryTable .safe-list td {
+	text-align: center;
+	border: 1px solid #e4e4e4;
+}
+
+.queryTable .safe-list td input[type='text'] {
+	width: 90px;
+}
+
+
+.data-list-right table {
+	border-collapse: collapse;
+	margin-bottom: 1px;
+}
+
+.data-list-right table td {
+	text-align: center;
+	border-bottom: 1px solid #e4e4e4;
+}
+
+.data-list-right table td a {
+	padding: 0;
+	margin: 0;
+	color: #7093d3;
+	cursor: pointer;
+}
+
+.set-service .data-list-left label {
+	display: block;
+}

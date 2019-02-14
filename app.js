@@ -40,23 +40,11 @@ app.use(async function (req, res, next) {
     res.cookie("token", req.query.token, {
       maxAge: 1000 * 60 * 20
     });
-    await httpHelper.get(req, res, '', `/tokenInnerApi/getFullUserInfoByToken?token=${req.query.token}`, "userInfo").then(function (data) {
-      let result = JSON.parse(data);
-      if (result.code===0) {
-          req.session.staffInfo = result.data;
-      } else {
-          res.status(403).send('Forbidden')
-      }
-    }, function (error) {
-        res.status(403).send('Forbidden')
-    });
   }
   next();
 });
 
 app.use(express.static(path.join(__dirname, "public")));
-
-app.use(authorize);
 
 app.use("/", indexRouter);
 

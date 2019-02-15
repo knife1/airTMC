@@ -18,15 +18,15 @@ module.exports = {
       ref  : 'origin/master',
       repo : 'git@github.com:knife1/airTMC.git',
       path : '/node/pm2-deploy-demo',
-      'post-deploy' : 'npm install && pm2 reload ecosystem.config.js --env server182'
+      'post-deploy' : 'npm install && pm2 reload ecosystem.config.js --env updateInstall'
     },
-    update : {
+    updateWeb : {
       user : 'root',
       host : ['101.132.46.123'],
       ref  : 'origin/master',
       repo : 'git@github.com:knife1/airTMC.git',
       path : '/node/pm2-deploy-demo',
-      'post-deploy' : 'pm2 reload ecosystem.config.js --env server115'
+      'post-deploy' : 'pm2 reload ecosystem.config.js --env updateWeb'
     },
   }
 };

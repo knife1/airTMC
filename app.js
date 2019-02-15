@@ -69,7 +69,7 @@ hbs.registerHelper({
     return null;
   },
   static: function (name) {
-    let baseUrl = _StaticUrl || "";
+    let baseUrl = "xxx" || "";
     return baseUrl + name;
   }
 });
